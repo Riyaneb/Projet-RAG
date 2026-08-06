@@ -45,3 +45,7 @@ def traitement():
     #On transforme les chunks en vecteurs et on les stocke dans une base de données ChromaDB
     index = VectorStoreIndex(nodes=chunk,storage_context=storage_context)
     print("Vecteurs créés et stockés dans la base de données ChromaDB")
+
+
+if __name__ == "__main__":
+    traitement()
