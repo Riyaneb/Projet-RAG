@@ -8,7 +8,8 @@ def main():
         from traitement import traitement
         traitement()
     elif args.action == "app":
-        pass
+        from app import app
+        app()
 
 
 if __name__ == "__main__":
