@@ -1,4 +1,6 @@
 import argparse
+import subprocess
+import sys
 
 def main():
     parser = argparse.ArgumentParser(description="Modèle RAG pour la recherche de cours de prépa PDF")
@@ -8,8 +10,7 @@ def main():
         from traitement import traitement
         traitement()
     elif args.action == "app":
-        from app import app
-        app()
+        subprocess.run([sys.executable, "-m", "streamlit", "run", "app.py"])
 
 
 if __name__ == "__main__":
